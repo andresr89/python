@@ -1,0 +1,18 @@
+def objetivo(numero):
+    if numero % 2 == 0:
+        return numero / 2
+    else:
+        return numero * 3 + 1
+
+def loop(numero):
+    resultado = objetivo(numero)
+    print(resultado)
+    
+    while resultado != 1:
+        resultado = objetivo(resultado)
+        print(resultado)
+
+numero_ingresado = int(input('Escoge un entero: '))
+
+loop(numero_ingresado)
+
