@@ -13,4 +13,4 @@ while abs (respuesta**2 - objetivo) >= epsilon:
 
     respuesta = (alto + bajo) / 2 
 
-print (f'la raiz cuadrada de {objetivo} es {respuesta}')
+print (f'la raiz cuadrada de {objetivo} es {respuesta}') 
