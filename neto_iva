@@ -1,0 +1,24 @@
+def total(bruto, descuento, iva):
+    descuento_monto = bruto * descuento / 100
+    iva_monto = (bruto - descuento_monto) * iva / 100
+    total_con_descuento_e_iva = bruto - descuento_monto + iva_monto
+    return total_con_descuento_e_iva
+
+def sugerido(valor):
+    sugerido_venta = valor / 0.654
+    return sugerido_venta
+
+numero_ingresado = int(input('Ingresa un valor: '))
+descuento_porcentaje = int(input('Ingresa el porcentaje de descuento: '))
+
+iva_ingresado = 19
+
+resultado_total = total(numero_ingresado, descuento_porcentaje, iva_ingresado)
+print("El total con descuento e IVA es:", resultado_total)
+
+opcion_sugerida = input('¿Desea obtener el valor sugerido de venta? (si/no): ')
+if opcion_sugerida.lower() == 'si':
+    sugerido_venta = sugerido(resultado_total)
+    print("El sugerido de venta es:", sugerido_venta)
+else:
+    print (resultado_total)
